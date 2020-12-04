@@ -1,0 +1,230 @@
+@charset "UTF-8";
+html {
+  box-sizing: border-box;
+}
+* {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: Verdana, Arial, serif;
+  font-size: 100%;
+  background-color: #f0f8ff;
+  margin: 0;
+}
+
+/* link styles */
+a:link,
+a:visited {
+  color: #959696;
+}
+a:focus,
+a:hover,
+a:active {
+  color: #959696;
+}
+
+a {
+  text-decoration: none;
+  border-bottom: 1px dotted;
+  padding-bottom: 0.2em;
+}
+
+/* header styles */
+header {
+  color: #92b7d1;
+  background-color: #959696;
+  background-size: cover;
+  text-align: center;
+  height: 13em;
+}
+header h1 {
+  margin-top: 1.5em;
+}
+header p {
+  display: none;
+}
+
+/* nav styles */
+nav,
+footer {
+  font-family: verdana, sans-serif;
+  background-color: #92b7d1;
+  text-align: right;
+}
+nav ul li a:link,
+nav ul li a:visited {
+  color: #959696;
+  text-align: right;
+}
+nav ul li a:focus,
+nav ul li a:hover,
+nav ul li a:active {
+  color: #fff;
+  text-align: right;
+}
+nav ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: right;
+}
+
+nav ul li {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  flex: 1 1 50%;
+  text-align: right;
+}
+nav ul li a {
+  display: block;
+  border: 1px solid;
+  padding: 0.5em 1em;
+  border-radius: 0.5em;
+  margin: 0.25em;
+  text-align: right;
+}
+
+/* main "products" styles */
+main {
+  font-size: 1em;
+  line-height: 1.4em;
+  color: #555;
+  margin: 2.5%;
+}
+h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+  font-size: 1.5em;
+}
+h3 {
+  font-family: sans-serif;
+  font-weight: normal;
+  font-size: 1.2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #000000;
+  text-align: left;
+  margin-top: 1.5em;
+}
+p {
+  font-family: sans-serif;
+  font-size: 0.8em;
+  color: black;
+  text-align: left;
+}
+p.more {
+  font-family: sans-serif;
+
+  font-size: 0.8em;
+}
+
+main img {
+  display: block;
+  margin: 0.5em auto;
+}
+/*
+
+
+
+
+/* aside "hours" styles */
+aside {
+  background: url(../images/scallop_top.png) repeat-x left top;
+  background-color: #f6f3ed;
+  padding: 1em;
+}
+/* misc styles */
+footer {
+  color: #eaddc4;
+  text-align: right;
+  font-size: 0.8em;
+  padding: 1em;
+}
+.day {
+  color: #783f27;
+  font-family: verdana, sans-serif;
+  font-size: 0.8em;
+  text-transform: uppercase;
+}
+.linelength {
+  background: yellow;
+}
+@media screen and (min-width: 400px) {
+  nav ul li {
+    flex: none;
+    text-align: right;
+  }
+  nav ul {
+    justify-context: right;
+  }
+}
+@media screen and (min-width: 480px) {
+  main img {
+    float: left;
+    margin: 0 1em 1em 0;
+  }
+}
+@media screen and (min-width: 600px) {
+  header p {
+    display: block;
+    margin-top: -1.5em;
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 1.2em;
+  }
+  main,
+  h2,
+  h3 {
+    font-family: Georgia, serif;
+  }
+  h2,
+  h3 {
+    font-weight: bold;
+  }
+  main {
+    line-height: 1.8em;
+    padding: 1em;
+    border: double 4px #eaddc4;
+    border-radius: 25px;
+    margin: 2.5%;
+  }
+}
+@media screen and (min-width: 940px) {
+  #container {
+    display: grid;
+    grid-template-rows: auto min-height 5em;
+    grid-template-columns: minmax(25em, 1fr) 16em;
+    grid-template-areas:
+      "banner banner"
+      "main hours"
+      "footer footer";
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  header {
+    grid-area: banner;
+  }
+  main {
+    grid-area: main;
+  }
+  aside {
+    grid-area: hours;
+    background: url(images/scallop.png) repeat-y left top;
+    background-color: #f6f3ed;
+    padding: 1em;
+    padding-left: 45px;
+  }
+  footer {
+    grid-area: footer;
+  }
+  #award {
+    position: absolute;
+    top: 30px;
+    left: 50px;
+  }
+}
